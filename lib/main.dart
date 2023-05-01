@@ -12,7 +12,12 @@ class Cine extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: Text(
+            'Lets learn together i want to contribute\nin movie app for bloc',
+            style: TextStyle(
+              color: Colors.red,
+            ),
+          ),
         ),
       ),
     );
