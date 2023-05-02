@@ -33,6 +33,7 @@ class SectionTitleAndSeeMore extends StatelessWidget {
               child: Row(
                 children: const [
                   Text('See More'),
+                  SizedBox(width: 5),
                   Icon(
                     Icons.arrow_forward_ios,
                     size: 16.0,
