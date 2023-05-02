@@ -1,5 +1,5 @@
 import 'package:cine_app/core/utils/services_locator.dart';
-import 'package:cine_app/movies/presentation/components/section_title_and_see_more.dart';
+import 'package:cine_app/movies/presentation/components/movies_screen_components/section_title_and_see_more.dart';
 import 'package:cine_app/movies/presentation/controller/movies_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +18,6 @@ class MoviesScreen extends StatelessWidget {
       create: (context) =>
           servicesLocator.get<MoviesBloc>()..add(GetNowPlayingMoviesEvent()),
       child: Scaffold(
-        backgroundColor: Colors.grey.shade900,
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           key: const Key('movieScrollView'),

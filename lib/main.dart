@@ -1,5 +1,7 @@
+import 'package:cine_app/core/utils/constants.dart';
 import 'package:cine_app/core/utils/services_locator.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'movies/presentation/screens/movies_screen.dart';
 
@@ -13,10 +15,14 @@ class Cine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cine App',
-      home: MoviesScreen(),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
+      ),
+      home: const MoviesScreen(),
     );
   }
 }
