@@ -5,14 +5,7 @@ import 'package:cine_app/movies/data/models/movies_model.dart';
 import 'package:dio/dio.dart';
 
 import '../../domain/entities/movies.dart';
-
-abstract class BaseMoviesRemoteDataSource {
-  Future<List<Movies>> getNowPlayingMovies();
-
-  Future<List<Movies>> getPopularMovies();
-
-  Future<List<Movies>> getTopRatedMovies();
-}
+import 'base_movies_remote_data_source.dart';
 
 class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   @override
