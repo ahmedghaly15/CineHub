@@ -1,18 +1,18 @@
 import 'package:cine_app/core/errors/exception_handler.dart';
 import 'package:cine_app/core/errors/failure.dart';
-import 'package:cine_app/movies/data/datasource/movies_remote_data_source.dart';
+import 'package:cine_app/movies/data/datasource/base_movies_remote_data_source.dart';
 import 'package:cine_app/movies/domain/entities/movies.dart';
 import 'package:cine_app/movies/domain/repository/movies_repo.dart';
 import 'package:dartz/dartz.dart';
 
 class MoviesRepoImpl extends MoviesRepo {
-  final MoviesRemoteDataSource moviesRemoteDataSource;
+  final BaseMoviesRemoteDataSource baseMoviesRemoteDataSource;
 
-  MoviesRepoImpl(this.moviesRemoteDataSource);
+  MoviesRepoImpl(this.baseMoviesRemoteDataSource);
 
   @override
   Future<Either<Failure, List<Movies>>> getNowPlayingMovies() async {
-    final result = await moviesRemoteDataSource.getNowPlayingMovies();
+    final result = await baseMoviesRemoteDataSource.getNowPlayingMovies();
 
     try {
       return Right(result);
@@ -23,7 +23,7 @@ class MoviesRepoImpl extends MoviesRepo {
 
   @override
   Future<Either<Failure, List<Movies>>> getPopularMovies() async {
-    final result = await moviesRemoteDataSource.getPopularMovies();
+    final result = await baseMoviesRemoteDataSource.getPopularMovies();
 
     try {
       return Right(result);
@@ -34,7 +34,7 @@ class MoviesRepoImpl extends MoviesRepo {
 
   @override
   Future<Either<Failure, List<Movies>>> getTopRatedMovies() async {
-    final result = await moviesRemoteDataSource.getTopRatedMovies();
+    final result = await baseMoviesRemoteDataSource.getTopRatedMovies();
 
     try {
       return Right(result);

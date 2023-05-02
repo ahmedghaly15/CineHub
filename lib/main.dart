@@ -1,6 +1,10 @@
+import 'package:cine_app/core/utils/services_locator.dart';
 import 'package:flutter/material.dart';
 
+import 'movies/presentation/screens/movies_screen.dart';
+
 void main() {
+  ServicesLocator().setupServiceLocator();
   runApp(const Cine());
 }
 
@@ -10,11 +14,9 @@ class Cine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Cine App',
+      home: MainMoviesScreen(),
     );
   }
 }
