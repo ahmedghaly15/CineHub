@@ -18,6 +18,8 @@ class MoviesModel extends Movies {
       backdropPath: json['backdrop_path'],
       genreIds: List<int>.from(json['genre_ids'].map((e) => e)),
       overview: json['overview'],
+
+      /// TODO : Check this
       voteAverage: json['vote_average'],
       releaseDate: json['release_date'],
     );
