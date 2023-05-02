@@ -4,6 +4,8 @@ import 'package:cine_app/movies/data/datasource/base_movies_remote_data_source.d
 import 'package:cine_app/movies/domain/entities/movie_details.dart';
 import 'package:cine_app/movies/domain/entities/movie_details_parameters.dart';
 import 'package:cine_app/movies/domain/entities/movies.dart';
+import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
+import 'package:cine_app/movies/domain/entities/recommendations.dart';
 import 'package:cine_app/movies/domain/repository/movies_repo.dart';
 import 'package:dartz/dartz.dart';
 
@@ -49,6 +51,19 @@ class MoviesRepoImpl extends MoviesRepo {
   Future<Either<Failure, MovieDetails>> getMovieDetails(
       MovieDetailsParameters parameters) async {
     final result = await baseMoviesRemoteDataSource.getMovieDetails(parameters);
+
+    try {
+      return Right(result);
+    } on ServerException catch (failure) {
+      return Left(ServerFailure(failure.errorMessageModel.statusMessage));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Recommendations>>> getRecommendations(
+      RecommendationsParameters parameters) async {
+    final result =
+        await baseMoviesRemoteDataSource.getRecommendations(parameters);
 
     try {
       return Right(result);

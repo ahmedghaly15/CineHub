@@ -1,4 +1,6 @@
 import 'package:cine_app/movies/domain/entities/movie_details_parameters.dart';
+import 'package:cine_app/movies/domain/entities/recommendations.dart';
+import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/errors/failure.dart';
@@ -14,5 +16,9 @@ abstract class MoviesRepo {
 
   Future<Either<Failure, MovieDetails>> getMovieDetails(
     MovieDetailsParameters parameters,
+  );
+
+  Future<Either<Failure, List<Recommendations>>> getRecommendations(
+    RecommendationsParameters parameters,
   );
 }
