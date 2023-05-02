@@ -8,6 +8,8 @@ import 'package:cine_app/movies/domain/usecases/get_top_rated_movies_usecase.dar
 import 'package:cine_app/movies/presentation/controller/movies_events.dart';
 import 'package:cine_app/movies/presentation/controller/movies_states.dart';
 
+import '../../../core/usecase/base_usecase.dart';
+
 class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
   final GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;
   final GetPopularMoviesUseCase getPopularMoviesUseCase;
@@ -29,7 +31,7 @@ class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
     GetNowPlayingMoviesEvent event,
     Emitter<MoviesStates> emit,
   ) async {
-    final result = await getNowPlayingMoviesUseCase();
+    final result = await getNowPlayingMoviesUseCase(const NoParameters());
     result.fold(
       (failure) {
         emit(
@@ -54,7 +56,7 @@ class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
     GetPopularMoviesEvent event,
     Emitter<MoviesStates> emit,
   ) async {
-    final result = await getPopularMoviesUseCase();
+    final result = await getPopularMoviesUseCase(const NoParameters());
     result.fold(
       (failure) {
         emit(
@@ -79,7 +81,7 @@ class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
     GetTopRatedMoviesEvent event,
     Emitter<MoviesStates> emit,
   ) async {
-    final result = await getTopRatedMoviesUseCase();
+    final result = await getTopRatedMoviesUseCase(const NoParameters());
 
     result.fold(
       (failure) {
