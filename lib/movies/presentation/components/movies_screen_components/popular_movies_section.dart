@@ -1,5 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cine_app/core/utils/constants.dart';
+import 'package:cine_app/movies/presentation/screens/movie_details_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,7 +36,10 @@ class PopularMoviesSection extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 8.0),
                   child: InkWell(
                     onTap: () {
-                      /// TODO : NAVIGATE TO  MOVIE DETAILS
+                      navigateTo(
+                        context: context,
+                        screen: MovieDetailScreen(id: movie.id),
+                      );
                     },
                     child: ClipRRect(
                       borderRadius:
