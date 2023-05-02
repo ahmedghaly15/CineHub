@@ -16,7 +16,7 @@ class Cine extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cine App',
-      home: MainMoviesScreen(),
+      home: MoviesScreen(),
     );
   }
 }
