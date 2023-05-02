@@ -1,12 +1,13 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cine_app/movies/presentation/components/movies_screen_components/shimmer_movies_list_view.dart';
-import 'package:cine_app/movies/presentation/controller/movies_states.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/network/api_constants.dart';
-import '../../controller/movies_bloc.dart';
+import '../../controllers/movie_controller/movies_bloc.dart';
+import '../../controllers/movie_controller/movies_states.dart';
 
 class TopRatedMoviesSection extends StatelessWidget {
   const TopRatedMoviesSection({super.key});

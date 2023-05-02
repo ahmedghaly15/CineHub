@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/utils/enums.dart';
-import '../../controller/movies_bloc.dart';
-import '../../controller/movies_states.dart';
+import '../../controllers/movie_controller/movies_bloc.dart';
+import '../../controllers/movie_controller/movies_states.dart';
+
 import 'now_playing_movie.dart';
 
 class NowPlayingMoviesSection extends StatelessWidget {

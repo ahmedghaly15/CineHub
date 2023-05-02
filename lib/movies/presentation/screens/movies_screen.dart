@@ -1,13 +1,13 @@
 import 'package:cine_app/core/utils/services_locator.dart';
 import 'package:cine_app/movies/presentation/components/movies_screen_components/section_title_and_see_more.dart';
-import 'package:cine_app/movies/presentation/controller/movies_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../components/movies_screen_components/now_playing_movies_section.dart';
 import '../components/movies_screen_components/popular_movies_section.dart';
 import '../components/movies_screen_components/top_rated_movies_section.dart';
-import '../controller/movies_bloc.dart';
+import '../controllers/movie_controller/movies_bloc.dart';
+import '../controllers/movie_controller/movies_events.dart';
 
 class MoviesScreen extends StatelessWidget {
   const MoviesScreen({Key? key}) : super(key: key);

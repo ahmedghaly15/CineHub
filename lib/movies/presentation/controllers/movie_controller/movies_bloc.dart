@@ -5,10 +5,10 @@ import 'package:cine_app/core/utils/enums.dart';
 import 'package:cine_app/movies/domain/usecases/get_now_playing_usecase.dart';
 import 'package:cine_app/movies/domain/usecases/get_popular_movies_usecase.dart';
 import 'package:cine_app/movies/domain/usecases/get_top_rated_movies_usecase.dart';
-import 'package:cine_app/movies/presentation/controller/movies_events.dart';
-import 'package:cine_app/movies/presentation/controller/movies_states.dart';
 
-import '../../../core/usecase/base_usecase.dart';
+import '../../../../core/usecase/base_usecase.dart';
+import 'movies_events.dart';
+import 'movies_states.dart';
 
 class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
   final GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;
