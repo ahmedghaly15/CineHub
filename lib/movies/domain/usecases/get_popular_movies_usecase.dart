@@ -10,6 +10,6 @@ class GetPopularMoviesUseCase {
   GetPopularMoviesUseCase(this.moviesRepo);
 
   Future<Either<Failure, List<Movies>>> execute() async {
-    return await moviesRepo.getNowPlayingMovies();
+    return await moviesRepo.getPopularMovies();
   }
 }

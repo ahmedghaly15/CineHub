@@ -1,4 +1,6 @@
 import 'package:cine_app/movies/data/datasource/movies_remote_data_source.dart';
+import 'package:cine_app/movies/domain/usecases/get_popular_movies_usecase.dart';
+import 'package:cine_app/movies/domain/usecases/get_top_rated_movies_usecase.dart';
 import 'package:cine_app/movies/presentation/controller/movies_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -19,11 +21,26 @@ class ServicesLocator {
   void setupServiceLocator() {
     // BLOC
     servicesLocator.registerFactory(
-        () => MoviesBloc(servicesLocator.get<GetNowPlayingMoviesUseCase>()));
+      () => MoviesBloc(
+        getNowPlayingMoviesUseCase:
+            servicesLocator.get<GetNowPlayingMoviesUseCase>(),
+        getPopularMoviesUseCase: servicesLocator.get<GetPopularMoviesUseCase>(),
+        getTopRatedMoviesUseCase:
+            servicesLocator.get<GetTopRatedMoviesUseCase>(),
+      ),
+    );
 
-    // USECASE
+    // USECASES
     servicesLocator.registerLazySingleton<GetNowPlayingMoviesUseCase>(() {
       return GetNowPlayingMoviesUseCase(servicesLocator.get<MoviesRepo>());
+    });
+
+    servicesLocator.registerLazySingleton<GetPopularMoviesUseCase>(() {
+      return GetPopularMoviesUseCase(servicesLocator.get<MoviesRepo>());
+    });
+
+    servicesLocator.registerLazySingleton<GetTopRatedMoviesUseCase>(() {
+      return GetTopRatedMoviesUseCase(servicesLocator.get<MoviesRepo>());
     });
 
     // REPOSITORY

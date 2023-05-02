@@ -15,8 +15,10 @@ class MoviesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          servicesLocator.get<MoviesBloc>()..add(GetNowPlayingMoviesEvent()),
+      create: (context) => servicesLocator.get<MoviesBloc>()
+        ..add(GetNowPlayingMoviesEvent())
+        ..add(GetPopularMoviesEvent())
+        ..add(GetTopRatedMoviesEvent()),
       child: Scaffold(
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
