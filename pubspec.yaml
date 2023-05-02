@@ -1,12 +1,15 @@
 name: cine_app
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: ">=2.19.6 <3.0.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
   animate_do: ^3.0.2
   bloc: ^8.1.1
   cached_network_image: ^3.2.3
@@ -14,9 +17,7 @@ dependencies:
   dartz: ^0.10.1
   dio: ^5.1.1
   equatable: ^2.0.5
-  flutter:
-    sdk: flutter
-  flutter_bloc: ^8.1.2
+  flutter_launcher_icons: ^0.13.1
   get_it: ^7.3.0
   google_fonts: ^4.0.4
   shimmer: ^2.0.0
@@ -26,5 +27,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app logo.png"
+
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/

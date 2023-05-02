@@ -7,11 +7,11 @@ import 'movies/presentation/screens/movies_screen.dart';
 
 void main() {
   ServicesLocator().setupServiceLocator();
-  runApp(const Cine());
+  runApp(const CineHub());
 }
 
-class Cine extends StatelessWidget {
-  const Cine({super.key});
+class CineHub extends StatelessWidget {
+  const CineHub({super.key});
 
   @override
   Widget build(BuildContext context) {
