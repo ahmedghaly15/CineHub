@@ -17,6 +17,6 @@ class GetMovieDetailsUseCase
   Future<Either<Failure, MovieDetails>> call(
     MovieDetailsParameters parameters,
   ) async {
-    return await moviesRepo.getMovieDetails();
+    return await moviesRepo.getMovieDetails(parameters);
   }
 }
