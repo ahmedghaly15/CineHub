@@ -29,7 +29,7 @@ class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
     GetNowPlayingMoviesEvent event,
     Emitter<MoviesStates> emit,
   ) async {
-    final result = await getNowPlayingMoviesUseCase.execute();
+    final result = await getNowPlayingMoviesUseCase();
     result.fold(
       (failure) {
         emit(
@@ -54,7 +54,7 @@ class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
     GetPopularMoviesEvent event,
     Emitter<MoviesStates> emit,
   ) async {
-    final result = await getPopularMoviesUseCase.execute();
+    final result = await getPopularMoviesUseCase();
     result.fold(
       (failure) {
         emit(
@@ -79,7 +79,7 @@ class MoviesBloc extends Bloc<MoviesEvents, MoviesStates> {
     GetTopRatedMoviesEvent event,
     Emitter<MoviesStates> emit,
   ) async {
-    final result = await getTopRatedMoviesUseCase.execute();
+    final result = await getTopRatedMoviesUseCase();
 
     result.fold(
       (failure) {
