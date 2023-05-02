@@ -1,4 +1,4 @@
-# Cine-App
+# CineHub-App
 
 A new Flutter project.
 
