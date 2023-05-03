@@ -1,8 +1,9 @@
-import 'package:cine_app/core/utils/services_locator.dart';
-import 'package:cine_app/movies/presentation/components/movie_details_screen_components/movie_details_screen_body.dart';
-import 'package:cine_app/movies/presentation/controllers/movie_details_controller/movie_details_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../controllers/movie_details_controller/bloc/movie_details_bloc.dart';
+import '/core/utils/services_locator.dart';
+import '/movies/presentation/components/movie_details_screen_components/movie_details_screen_body.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
   final int id;

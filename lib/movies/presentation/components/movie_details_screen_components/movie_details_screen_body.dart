@@ -1,12 +1,12 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:cine_app/core/global/app_strings.dart';
-import 'package:cine_app/core/global/app_styles.dart';
-import 'package:cine_app/movies/presentation/components/movie_details_screen_components/recommendation_movies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/enums.dart';
-import '../../controllers/movie_details_controller/movie_details_bloc.dart';
+import '../../controllers/movie_details_controller/bloc/movie_details_bloc.dart';
+import '/core/global/app_strings.dart';
+import '/core/global/app_styles.dart';
+import '/core/utils/enums.dart';
+import '/movies/presentation/components/movie_details_screen_components/recommendation_movies.dart';
 import 'movie_details_section.dart';
 import 'movie_image_and_back_button.dart';
 

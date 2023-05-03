@@ -3,12 +3,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/global/app_navigation.dart';
-import '../../../../core/utils/enums.dart';
-import '../../controllers/movie_controller/movies_bloc.dart';
-import '../../controllers/movie_controller/movies_states.dart';
-
+import '../../controllers/movie_controller/bloc/movies_bloc.dart';
+import '../../controllers/movie_controller/bloc/movies_states.dart';
 import '../../screens/movie_details_screen.dart';
+import '/core/global/app_navigation.dart';
+import '/core/utils/enums.dart';
 import 'now_playing_movie.dart';
 
 class NowPlayingMoviesSection extends StatelessWidget {

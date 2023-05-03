@@ -1,4 +1,4 @@
-import 'package:cine_app/movies/domain/entities/movies.dart';
+import '/movies/domain/entities/movies.dart';
 
 class MoviesModel extends Movies {
   const MoviesModel({

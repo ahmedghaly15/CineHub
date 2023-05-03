@@ -1,11 +1,11 @@
-import 'package:cine_app/movies/domain/entities/movie_details_parameters.dart';
-import 'package:cine_app/movies/domain/entities/recommendations.dart';
-import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
 import 'package:dartz/dartz.dart';
 
-import '../../../core/errors/failure.dart';
 import '../entities/movie_details.dart';
+import '/core/errors/failure.dart';
+import '/movies/domain/entities/movie_details_parameters.dart';
 import '/movies/domain/entities/movies.dart';
+import '/movies/domain/entities/recommendations.dart';
+import '/movies/domain/entities/recommendations_parameters.dart';
 
 abstract class MoviesRepo {
   Future<Either<Failure, List<Movies>>> getNowPlayingMovies();

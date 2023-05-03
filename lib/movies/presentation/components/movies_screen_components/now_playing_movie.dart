@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cine_app/core/global/app_styles.dart';
-import 'package:cine_app/movies/domain/entities/movies.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/network/api_constants.dart';
+import '/core/global/app_styles.dart';
+import '/core/network/api_constants.dart';
+import '/movies/domain/entities/movies.dart';
 
 class NowPlayingMovie extends StatelessWidget {
   final Movies movie;

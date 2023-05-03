@@ -1,15 +1,15 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cine_app/core/components/release_data.dart';
-import 'package:cine_app/movies/domain/entities/movies.dart';
 import 'package:flutter/material.dart';
 
+import '../../movies/presentation/components/movies_screen_components/shimmer_movies_list_view.dart';
+import '../../movies/presentation/screens/movie_details_screen.dart';
 import '../global/app_colors.dart';
 import '../global/app_navigation.dart';
 import '../global/app_styles.dart';
 import '../network/api_constants.dart';
-import '../../movies/presentation/screens/movie_details_screen.dart';
-import '../../movies/presentation/components/movies_screen_components/shimmer_movies_list_view.dart';
+import '/core/components/release_data.dart';
+import '/movies/domain/entities/movies.dart';
 
 class MovieItem extends StatelessWidget {
   final Movies movie;

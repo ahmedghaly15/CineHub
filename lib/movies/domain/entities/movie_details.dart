@@ -1,5 +1,6 @@
-import 'package:cine_app/movies/domain/entities/genres.dart';
 import 'package:equatable/equatable.dart';
+
+import '/movies/domain/entities/genres.dart';
 
 class MovieDetails extends Equatable {
   final int id;

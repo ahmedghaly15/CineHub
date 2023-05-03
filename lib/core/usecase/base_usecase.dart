@@ -1,6 +1,7 @@
-import 'package:cine_app/core/errors/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+
+import '/core/errors/failure.dart';
 
 abstract class BaseUseCase<T, Parameters> {
   Future<Either<Failure, T>> call(Parameters parameters);

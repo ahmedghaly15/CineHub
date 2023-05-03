@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:cine_app/core/utils/enums.dart';
-import 'package:cine_app/movies/domain/usecases/get_now_playing_usecase.dart';
-import 'package:cine_app/movies/domain/usecases/get_popular_movies_usecase.dart';
-import 'package:cine_app/movies/domain/usecases/get_top_rated_movies_usecase.dart';
 
-import '../../../../core/usecase/base_usecase.dart';
+import '/core/usecase/base_usecase.dart';
+import '/core/utils/enums.dart';
+import '/movies/domain/usecases/get_now_playing_usecase.dart';
+import '/movies/domain/usecases/get_popular_movies_usecase.dart';
+import '/movies/domain/usecases/get_top_rated_movies_usecase.dart';
 import 'movies_events.dart';
 import 'movies_states.dart';
 

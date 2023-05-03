@@ -1,11 +1,11 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:cine_app/core/global/app_strings.dart';
-import 'package:cine_app/core/global/app_styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/release_data.dart';
 import '../../../domain/entities/genres.dart';
 import '../../../domain/entities/movie_details.dart';
+import '/core/components/release_data.dart';
+import '/core/global/app_strings.dart';
+import '/core/global/app_styles.dart';
 
 class MovieDetailsSection extends StatelessWidget {
   final MovieDetails movie;

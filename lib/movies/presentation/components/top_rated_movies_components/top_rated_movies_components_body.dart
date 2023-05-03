@@ -1,11 +1,11 @@
-import 'package:cine_app/core/global/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/components/back_button.dart';
-import '../../../../core/components/movie_item.dart';
-import '../../controllers/movie_controller/movies_bloc.dart';
-import '../../controllers/movie_controller/movies_states.dart';
+import '../../controllers/movie_controller/bloc/movies_bloc.dart';
+import '../../controllers/movie_controller/bloc/movies_states.dart';
+import '/core/components/back_button.dart';
+import '/core/components/movie_item.dart';
+import '/core/global/app_strings.dart';
 
 class TopRatedMoviesScreenBody extends StatelessWidget {
   const TopRatedMoviesScreenBody({super.key});

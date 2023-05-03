@@ -1,14 +1,15 @@
 import 'dart:async';
 
-import 'package:cine_app/core/utils/enums.dart';
-import 'package:cine_app/movies/domain/entities/movie_details.dart';
-import 'package:cine_app/movies/domain/entities/movie_details_parameters.dart';
-import 'package:cine_app/movies/domain/entities/recommendations.dart';
-import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
-import 'package:cine_app/movies/domain/usecases/get_movie_details_usecase.dart';
-import 'package:cine_app/movies/domain/usecases/get_recommendations_usecase.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '/core/utils/enums.dart';
+import '/movies/domain/entities/movie_details.dart';
+import '/movies/domain/entities/movie_details_parameters.dart';
+import '/movies/domain/entities/recommendations.dart';
+import '/movies/domain/entities/recommendations_parameters.dart';
+import '/movies/domain/usecases/get_movie_details_usecase.dart';
+import '/movies/domain/usecases/get_recommendations_usecase.dart';
 
 part 'movie_details_events.dart';
 part 'movie_details_states.dart';

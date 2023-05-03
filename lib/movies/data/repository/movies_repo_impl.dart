@@ -1,13 +1,14 @@
-import 'package:cine_app/core/errors/exception_handler.dart';
-import 'package:cine_app/core/errors/failure.dart';
-import 'package:cine_app/movies/data/datasource/base_movies_remote_data_source.dart';
-import 'package:cine_app/movies/domain/entities/movie_details.dart';
-import 'package:cine_app/movies/domain/entities/movie_details_parameters.dart';
-import 'package:cine_app/movies/domain/entities/movies.dart';
-import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
-import 'package:cine_app/movies/domain/entities/recommendations.dart';
-import 'package:cine_app/movies/domain/repository/movies_repo.dart';
 import 'package:dartz/dartz.dart';
+
+import '/core/errors/exception_handler.dart';
+import '/core/errors/failure.dart';
+import '/movies/data/datasource/base_movies_remote_data_source.dart';
+import '/movies/domain/entities/movie_details.dart';
+import '/movies/domain/entities/movie_details_parameters.dart';
+import '/movies/domain/entities/movies.dart';
+import '/movies/domain/entities/recommendations.dart';
+import '/movies/domain/entities/recommendations_parameters.dart';
+import '/movies/domain/repository/movies_repo.dart';
 
 class MoviesRepoImpl extends MoviesRepo {
   final BaseMoviesRemoteDataSource baseMoviesRemoteDataSource;

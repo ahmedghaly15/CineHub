@@ -2,8 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/back_button.dart';
-import '../../../../core/network/api_constants.dart';
+import '/core/components/back_button.dart';
+import '/core/network/api_constants.dart';
 
 class MovieImageAndBackButton extends StatelessWidget {
   const MovieImageAndBackButton({

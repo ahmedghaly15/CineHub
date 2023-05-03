@@ -1,9 +1,8 @@
-import 'package:cine_app/movies/data/models/movies_model.dart';
-import 'package:cine_app/movies/data/models/recommendations_model.dart';
-import 'package:cine_app/movies/domain/entities/movie_details_parameters.dart';
-import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
-
 import '../models/movie_details_model.dart';
+import '/movies/data/models/movies_model.dart';
+import '/movies/data/models/recommendations_model.dart';
+import '/movies/domain/entities/movie_details_parameters.dart';
+import '/movies/domain/entities/recommendations_parameters.dart';
 
 abstract class BaseMoviesRemoteDataSource {
   Future<List<MoviesModel>> getNowPlayingMovies();

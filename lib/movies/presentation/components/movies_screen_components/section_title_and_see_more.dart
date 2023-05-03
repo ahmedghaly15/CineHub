@@ -1,7 +1,8 @@
-import 'package:cine_app/core/global/app_colors.dart';
-import 'package:cine_app/core/global/app_strings.dart';
-import 'package:cine_app/core/global/app_styles.dart';
 import 'package:flutter/material.dart';
+
+import '/core/global/app_colors.dart';
+import '/core/global/app_strings.dart';
+import '/core/global/app_styles.dart';
 
 class SectionTitleAndSeeMore extends StatelessWidget {
   final String title;

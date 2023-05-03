@@ -1,5 +1,5 @@
-import 'package:cine_app/movies/data/models/genres_model.dart';
-import 'package:cine_app/movies/domain/entities/movie_details.dart';
+import '/movies/data/models/genres_model.dart';
+import '/movies/domain/entities/movie_details.dart';
 
 class MovieDetailsModel extends MovieDetails {
   const MovieDetailsModel({

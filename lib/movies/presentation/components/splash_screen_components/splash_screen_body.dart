@@ -1,12 +1,12 @@
-import 'package:cine_app/core/global/app_assets.dart';
-import 'package:cine_app/core/global/app_navigation.dart';
-import 'package:cine_app/core/global/app_strings.dart';
-import 'package:cine_app/movies/presentation/screens/movies_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../core/global/app_colors.dart';
-import '../../../../core/global/app_styles.dart';
+import '/core/global/app_assets.dart';
+import '/core/global/app_colors.dart';
+import '/core/global/app_navigation.dart';
+import '/core/global/app_strings.dart';
+import '/core/global/app_styles.dart';
+import '/movies/presentation/screens/movies_screen.dart';
 
 class SplashScreenBody extends StatefulWidget {
   const SplashScreenBody({super.key});

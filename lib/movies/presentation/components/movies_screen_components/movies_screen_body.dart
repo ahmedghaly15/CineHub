@@ -1,9 +1,9 @@
-import 'package:cine_app/core/global/app_navigation.dart';
-import 'package:cine_app/core/global/app_strings.dart';
-import 'package:cine_app/movies/presentation/screens/popular_movies_screen.dart';
-import 'package:cine_app/movies/presentation/screens/top_rated_movies_screen.dart';
 import 'package:flutter/material.dart';
 
+import '/core/global/app_navigation.dart';
+import '/core/global/app_strings.dart';
+import '/movies/presentation/screens/popular_movies_screen.dart';
+import '/movies/presentation/screens/top_rated_movies_screen.dart';
 import 'now_playing_movies_section.dart';
 import 'popular_movies_section.dart';
 import 'section_title_and_see_more.dart';

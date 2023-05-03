@@ -1,10 +1,10 @@
-import 'package:cine_app/core/errors/failure.dart';
-import 'package:cine_app/core/usecase/base_usecase.dart';
-import 'package:cine_app/movies/domain/entities/recommendations_parameters.dart';
-import 'package:cine_app/movies/domain/repository/movies_repo.dart';
 import 'package:dartz/dartz.dart';
 
 import '../entities/recommendations.dart';
+import '/core/errors/failure.dart';
+import '/core/usecase/base_usecase.dart';
+import '/movies/domain/entities/recommendations_parameters.dart';
+import '/movies/domain/repository/movies_repo.dart';
 
 class GetRecommendationsUseCase
     extends BaseUseCase<List<Recommendations>, RecommendationsParameters> {
