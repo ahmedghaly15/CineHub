@@ -29,7 +29,7 @@ class TopRatedMoviesSection extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              itemCount: state.topRatedMovies.length,
+              itemCount: 5.clamp(0, state.topRatedMovies.length),
               itemBuilder: (context, index) {
                 final movie = state.topRatedMovies[index];
                 return Container(

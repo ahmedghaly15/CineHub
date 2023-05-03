@@ -6,4 +6,6 @@ abstract class AppStrings {
   static const moreLikeThis = 'More like this';
   static const genres = 'Genres';
   static const splashText = "Enter a World of Entertainment";
+  static const popularMoviesScreenAppBar = "Popular Movies";
+  static const topRatedMoviesScreenAppBar = "Top Rated Movies";
 }

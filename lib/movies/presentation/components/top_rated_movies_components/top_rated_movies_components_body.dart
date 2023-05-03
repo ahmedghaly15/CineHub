@@ -1,25 +1,23 @@
 import 'package:cine_app/core/global/app_strings.dart';
-import 'package:cine_app/movies/presentation/controllers/movie_controller/movies_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/components/back_button.dart';
-import '../../controllers/movie_controller/movies_bloc.dart';
 import '../../../../core/components/movie_item.dart';
+import '../../controllers/movie_controller/movies_bloc.dart';
+import '../../controllers/movie_controller/movies_states.dart';
 
-class PopularMoviesScreenBody extends StatelessWidget {
-  const PopularMoviesScreenBody({
-    super.key,
-  });
+class TopRatedMoviesScreenBody extends StatelessWidget {
+  const TopRatedMoviesScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      key: const Key('popularMoviesScreenScrollView'),
+      key: const Key('topRatedMoviesScreenScrollView'),
       slivers: <Widget>[
         const SliverAppBar(
           pinned: false,
-          title: Text(AppStrings.popularMoviesScreenAppBar),
+          title: Text(AppStrings.topRatedMoviesScreenAppBar),
           leading: GetBackButton(),
         ),
         BlocBuilder<MoviesBloc, MoviesStates>(
@@ -33,9 +31,9 @@ class PopularMoviesScreenBody extends StatelessWidget {
                 child: ListView.separated(
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.zero,
-                  itemCount: state.popularMovies.length,
+                  itemCount: state.topRatedMovies.length,
                   itemBuilder: (context, index) {
-                    return MovieItem(movie: state.popularMovies[index]);
+                    return MovieItem(movie: state.topRatedMovies[index]);
                   },
                   separatorBuilder: (context, index) {
                     return const SizedBox(height: 6);
