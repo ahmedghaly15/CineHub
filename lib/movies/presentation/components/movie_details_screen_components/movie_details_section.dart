@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:cine_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -101,7 +102,7 @@ class MovieDetailsSection extends StatelessWidget {
               ),
               const SizedBox(height: 8.0),
               Text(
-                'Genres: ${_showGenres(movie.genres)}',
+                '${AppStrings.genres}: ${_showGenres(movie.genres)}',
                 style: const TextStyle(
                   color: Colors.white70,
                   fontSize: 12.0,

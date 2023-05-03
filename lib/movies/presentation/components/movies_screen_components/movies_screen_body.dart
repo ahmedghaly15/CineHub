@@ -1,3 +1,4 @@
+import 'package:cine_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 
 import 'now_playing_movies_section.dart';
@@ -20,12 +21,12 @@ class MoviesScreenBody extends StatelessWidget {
         children: [
           const NowPlayingMoviesSection(),
           SectionTitleAndSeeMore(
-            title: "Popular",
+            title: AppStrings.popular,
             onTap: () {},
           ),
           const PopularMoviesSection(),
           SectionTitleAndSeeMore(
-            title: "Top Rated",
+            title: AppStrings.topRated,
             onTap: () {},
           ),
           const TopRatedMoviesSection(),

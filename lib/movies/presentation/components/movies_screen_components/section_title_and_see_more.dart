@@ -1,3 +1,4 @@
+import 'package:cine_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,7 +33,7 @@ class SectionTitleAndSeeMore extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: const [
-                  Text('See More'),
+                  Text(AppStrings.seeMore),
                   SizedBox(width: 5),
                   Icon(
                     Icons.arrow_forward_ios,

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:cine_app/core/utils/app_strings.dart';
 import 'package:cine_app/core/utils/constants.dart';
 import 'package:cine_app/core/utils/services_locator.dart';
 import 'package:cine_app/movies/presentation/screens/movies_screen.dart';
@@ -22,7 +23,7 @@ class CineHub extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CineHub App',
+      title: AppStrings.appName,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kPrimaryColor,
         textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
