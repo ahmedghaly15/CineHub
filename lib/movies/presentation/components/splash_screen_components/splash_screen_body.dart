@@ -47,18 +47,13 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
           animation: slideAnimation,
           builder: (context, _) => SlideTransition(
             position: slideAnimation,
-            child: Container(
-              margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width * 0.1,
+            child: Text(
+              AppStrings.splashText,
+              style: AppStyles.textStyle16.copyWith(
+                fontWeight: FontWeight.w600,
+                color: AppColors.kSecondaryColor,
               ),
-              child: Text(
-                AppStrings.splashText,
-                style: AppStyles.textStyle16.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.kSecondaryColor,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              textAlign: TextAlign.center,
             ),
           ),
         ),
@@ -83,7 +78,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
     );
 
     slideAnimation = Tween<Offset>(
-      begin: const Offset(0, 10),
+      begin: const Offset(0, 20),
       end: Offset.zero,
     ).animate(
       CurvedAnimation(

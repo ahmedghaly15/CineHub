@@ -29,7 +29,8 @@ class PopularMoviesSection extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              itemCount: state.popularMovies.length,
+              // to get only 5 movies
+              itemCount: 5.clamp(0, state.popularMovies.length),
               itemBuilder: (context, index) {
                 final movie = state.popularMovies[index];
                 return Container(

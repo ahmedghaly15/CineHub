@@ -3,6 +3,7 @@ import 'package:cine_app/core/global/app_strings.dart';
 import 'package:cine_app/core/global/app_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/components/release_data.dart';
 import '../../../domain/entities/genres.dart';
 import '../../../domain/entities/movie_details.dart';
 
@@ -31,19 +32,9 @@ class MovieDetailsSection extends StatelessWidget {
               const SizedBox(height: 8.0),
               Row(
                 children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 2.0,
-                      horizontal: 8.0,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[800],
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Text(
-                      movie.releaseDate.split('-')[0],
-                      style: AppStyles.textStyle16,
-                    ),
+                  ReleaseData(
+                    releaseDate: movie.releaseDate,
+                    color: Colors.grey[800]!,
                   ),
                   const SizedBox(width: 16.0),
                   Row(
