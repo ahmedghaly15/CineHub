@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cine_app/core/global/app_strings.dart';
+import 'package:cine_app/core/global/app_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../domain/entities/genres.dart';
 import '../../../domain/entities/movie_details.dart';
@@ -23,9 +23,8 @@ class MovieDetailsSection extends StatelessWidget {
             children: [
               Text(
                 movie.title,
-                style: GoogleFonts.poppins(
+                style: AppStyles.textStyle24.copyWith(
                   fontSize: 23,
-                  fontWeight: FontWeight.bold,
                   letterSpacing: 1.2,
                 ),
               ),
@@ -43,10 +42,7 @@ class MovieDetailsSection extends StatelessWidget {
                     ),
                     child: Text(
                       movie.releaseDate.split('-')[0],
-                      style: const TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: AppStyles.textStyle16,
                     ),
                   ),
                   const SizedBox(width: 16.0),
@@ -60,18 +56,7 @@ class MovieDetailsSection extends StatelessWidget {
                       const SizedBox(width: 4.0),
                       Text(
                         (movie.voteAverage / 2).toStringAsFixed(1),
-                        style: const TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 1.2,
-                        ),
-                      ),
-                      const SizedBox(width: 4.0),
-                      Text(
-                        '(${movie.voteAverage})',
-                        style: const TextStyle(
-                          fontSize: 1.0,
-                          fontWeight: FontWeight.w500,
+                        style: AppStyles.textStyle16.copyWith(
                           letterSpacing: 1.2,
                         ),
                       ),
@@ -80,10 +65,8 @@ class MovieDetailsSection extends StatelessWidget {
                   const SizedBox(width: 16.0),
                   Text(
                     _showDuration(movie.runtime),
-                    style: const TextStyle(
+                    style: AppStyles.textStyle16.copyWith(
                       color: Colors.white70,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w500,
                       letterSpacing: 1.2,
                     ),
                   ),
@@ -92,22 +75,16 @@ class MovieDetailsSection extends StatelessWidget {
               const SizedBox(height: 20.0),
               Text(
                 movie.overview,
-                style: const TextStyle(
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 1.2,
-                ),
+                style: AppStyles.textStyle14,
                 maxLines: 5,
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 8.0),
               Text(
                 '${AppStrings.genres}: ${_showGenres(movie.genres)}',
-                style: const TextStyle(
+                style: AppStyles.textStyle14.copyWith(
                   color: Colors.white70,
-                  fontSize: 12.0,
                   fontWeight: FontWeight.w500,
-                  letterSpacing: 1.2,
                 ),
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cine_app/core/global/app_styles.dart';
 import 'package:cine_app/movies/domain/entities/movies.dart';
 import 'package:flutter/material.dart';
 
@@ -64,9 +65,7 @@ class NowPlayingMovie extends StatelessWidget {
                     const SizedBox(width: 4.0),
                     Text(
                       'Now Playing'.toUpperCase(),
-                      style: const TextStyle(
-                        fontSize: 16.0,
-                      ),
+                      style: AppStyles.textStyle16,
                     ),
                   ],
                 ),
@@ -76,10 +75,7 @@ class NowPlayingMovie extends StatelessWidget {
                 child: Text(
                   movie.title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: AppStyles.textStyle24,
                 ),
               ),
             ],

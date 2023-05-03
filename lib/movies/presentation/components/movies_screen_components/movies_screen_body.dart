@@ -30,7 +30,7 @@ class MoviesScreenBody extends StatelessWidget {
             onTap: () {},
           ),
           const TopRatedMoviesSection(),
-          const SizedBox(height: 10.0),
+          const SizedBox(height: 15.0),
         ],
       ),
     );

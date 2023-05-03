@@ -1,6 +1,7 @@
+import 'package:cine_app/core/global/app_colors.dart';
 import 'package:cine_app/core/global/app_strings.dart';
+import 'package:cine_app/core/global/app_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SectionTitleAndSeeMore extends StatelessWidget {
   final String title;
@@ -20,24 +21,25 @@ class SectionTitleAndSeeMore extends StatelessWidget {
         children: [
           Text(
             title,
-            style: GoogleFonts.poppins(
-              fontSize: 19,
-              fontWeight: FontWeight.w500,
-              letterSpacing: 0.15,
-            ),
+            style: AppStyles.textStyle19,
           ),
           InkWell(
-            /// TODO : NAVIGATION TO POPULAR SCREEN
             onTap: onTap,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                children: const [
-                  Text(AppStrings.seeMore),
-                  SizedBox(width: 5),
-                  Icon(
+                children: [
+                  Text(
+                    AppStrings.seeMore,
+                    style: AppStyles.textStyle16.copyWith(
+                      color: AppColors.kSecondaryColor,
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  const Icon(
                     Icons.arrow_forward_ios,
                     size: 16.0,
+                    color: AppColors.kSecondaryColor,
                   )
                 ],
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppNavigation {
+abstract class AppNavigation {
   static void navigateBack(context) {
     Navigator.pop(context);
   }
