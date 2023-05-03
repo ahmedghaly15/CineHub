@@ -2,8 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/global/app_navigation.dart';
 import '../../../../core/network/api_constants.dart';
-import '../../../../core/utils/constants.dart';
 
 class MovieImageAndBackButton extends StatelessWidget {
   const MovieImageAndBackButton({
@@ -19,7 +19,7 @@ class MovieImageAndBackButton extends StatelessWidget {
       pinned: false,
       expandedHeight: 300.0,
       leading: IconButton(
-        onPressed: () => navigateBack(context),
+        onPressed: () => AppNavigation.navigateBack(context),
         icon: const Icon(
           Icons.arrow_back_ios,
           size: 25,

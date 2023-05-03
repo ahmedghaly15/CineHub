@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:cine_app/core/utils/app_strings.dart';
+import 'package:cine_app/core/global/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -3,7 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/constants.dart';
+import '../../../../core/global/app_navigation.dart';
 import '../../../../core/utils/enums.dart';
 import '../../controllers/movie_controller/movies_bloc.dart';
 import '../../controllers/movie_controller/movies_states.dart';
@@ -47,7 +47,7 @@ class NowPlayingMoviesSection extends StatelessWidget {
                     return GestureDetector(
                       key: const Key('openMovieMinimalDetail'),
                       onTap: () {
-                        navigateTo(
+                        AppNavigation.navigateTo(
                           context: context,
                           screen: MovieDetailsScreen(id: item.id),
                         );
