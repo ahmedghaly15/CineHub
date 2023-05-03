@@ -49,8 +49,9 @@ class NowPlayingMoviesSection extends StatelessWidget {
                       onTap: () {
                         navigateTo(
                           context: context,
-                          screen: MovieDetailScreen(id: item.id),
+                          screen: MovieDetailsScreen(id: item.id),
                         );
+                        // print("${item.id}");
                       },
                       child: NowPlayingMovie(movie: item),
                     );

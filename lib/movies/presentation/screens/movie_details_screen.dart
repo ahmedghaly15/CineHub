@@ -1,19 +1,25 @@
+import 'package:cine_app/core/utils/services_locator.dart';
 import 'package:cine_app/movies/presentation/components/movie_details_screen_components/movie_details_screen_body.dart';
+import 'package:cine_app/movies/presentation/controllers/movie_details_controller/movie_details_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/utils/dummy.dart';
-
-class MovieDetailScreen extends StatelessWidget {
+class MovieDetailsScreen extends StatelessWidget {
   final int id;
 
-  const MovieDetailScreen({Key? key, required this.id}) : super(key: key);
+  const MovieDetailsScreen({
+    Key? key,
+    required this.id,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: MovieDetailsScreenBody(
-        movie: movieDetailDummy,
-        recommendations: recommendationsDummy,
+    return BlocProvider(
+      create: (context) => servicesLocator.get<MovieDetailsBloc>()
+        ..add(GetMovieDetailsEvent(id))
+        ..add(GetMovieRecommendationsEvent(id)),
+      child: const Scaffold(
+        body: MovieDetailsScreenBody(),
       ),
     );
   }

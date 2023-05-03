@@ -24,7 +24,7 @@ class MovieDetailsSection extends StatelessWidget {
                 movie.title,
                 style: GoogleFonts.poppins(
                   fontSize: 23,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.bold,
                   letterSpacing: 1.2,
                 ),
               ),

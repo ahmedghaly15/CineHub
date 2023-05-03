@@ -1,6 +1,7 @@
 import 'package:cine_app/movies/data/datasource/movies_remote_data_source.dart';
 import 'package:cine_app/movies/domain/usecases/get_movie_details_usecase.dart';
 import 'package:cine_app/movies/domain/usecases/get_popular_movies_usecase.dart';
+import 'package:cine_app/movies/domain/usecases/get_recommendations_usecase.dart';
 import 'package:cine_app/movies/domain/usecases/get_top_rated_movies_usecase.dart';
 import 'package:cine_app/movies/presentation/controllers/movie_details_controller/movie_details_bloc.dart';
 
@@ -36,6 +37,7 @@ class ServicesLocator {
     servicesLocator.registerFactory<MovieDetailsBloc>(
       () => MovieDetailsBloc(
         servicesLocator.get<GetMovieDetailsUseCase>(),
+        servicesLocator.get<GetRecommendationsUseCase>(),
       ),
     );
 
@@ -54,6 +56,10 @@ class ServicesLocator {
 
     servicesLocator.registerLazySingleton<GetMovieDetailsUseCase>(() {
       return GetMovieDetailsUseCase(servicesLocator.get<MoviesRepo>());
+    });
+
+    servicesLocator.registerLazySingleton<GetRecommendationsUseCase>(() {
+      return GetRecommendationsUseCase(servicesLocator.get<MoviesRepo>());
     });
 
     // REPOSITORY

@@ -4,21 +4,20 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/network/api_constants.dart';
 import '../../../../core/utils/constants.dart';
-import '../../../domain/entities/movie_details.dart';
 
 class MovieImageAndBackButton extends StatelessWidget {
   const MovieImageAndBackButton({
     super.key,
-    required this.movie,
+    required this.image,
   });
 
-  final MovieDetails movie;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       pinned: false,
-      expandedHeight: 280.0,
+      expandedHeight: 300.0,
       leading: IconButton(
         onPressed: () => navigateBack(context),
         icon: const Icon(
@@ -31,16 +30,16 @@ class MovieImageAndBackButton extends StatelessWidget {
           duration: const Duration(milliseconds: 500),
           child: ShaderMask(
             shaderCallback: (rect) {
-              return const LinearGradient(
+              return LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.transparent,
+                  Colors.transparent.withOpacity(0.2),
                   Colors.black,
                   Colors.black,
-                  Colors.transparent,
+                  Colors.transparent.withOpacity(0.2),
                 ],
-                stops: [0.0, 0.5, 1.0, 1.0],
+                stops: const [0.0, 0.4, 1.0, 1.0],
               ).createShader(
                 Rect.fromLTRB(0.0, 0.0, rect.width, rect.height),
               );
@@ -48,7 +47,7 @@ class MovieImageAndBackButton extends StatelessWidget {
             blendMode: BlendMode.dstIn,
             child: CachedNetworkImage(
               width: MediaQuery.of(context).size.width,
-              imageUrl: ApiConstants.imageUrl(movie.backdropPath),
+              imageUrl: ApiConstants.imageUrl(image),
               fit: BoxFit.cover,
             ),
           ),

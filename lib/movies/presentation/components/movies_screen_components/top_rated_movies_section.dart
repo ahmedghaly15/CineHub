@@ -38,7 +38,7 @@ class TopRatedMoviesSection extends StatelessWidget {
                     onTap: () {
                       navigateTo(
                         context: context,
-                        screen: MovieDetailScreen(id: movie.id),
+                        screen: MovieDetailsScreen(id: movie.id),
                       );
                     },
                     child: ClipRRect(

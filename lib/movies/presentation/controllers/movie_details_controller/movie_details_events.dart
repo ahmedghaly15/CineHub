@@ -2,9 +2,6 @@ part of 'movie_details_bloc.dart';
 
 abstract class MovieDetailsEvents extends Equatable {
   const MovieDetailsEvents();
-
-  @override
-  List<Object> get props => [];
 }
 
 class GetMovieDetailsEvent extends MovieDetailsEvents {
@@ -13,7 +10,7 @@ class GetMovieDetailsEvent extends MovieDetailsEvents {
   const GetMovieDetailsEvent(this.id);
 
   @override
-  List<Object> get props => [id];
+  List<Object?> get props => [id];
 }
 
 class GetMovieRecommendationsEvent extends MovieDetailsEvents {

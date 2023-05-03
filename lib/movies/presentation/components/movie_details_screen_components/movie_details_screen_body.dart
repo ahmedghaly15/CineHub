@@ -1,52 +1,67 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cine_app/movies/presentation/components/movie_details_screen_components/recommendation_movies.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../domain/entities/movie_details.dart';
-import '../../../domain/entities/recommendations.dart';
+import '../../../../core/utils/enums.dart';
+import '../../controllers/movie_details_controller/movie_details_bloc.dart';
 import 'movie_details_section.dart';
 import 'movie_image_and_back_button.dart';
 
 class MovieDetailsScreenBody extends StatelessWidget {
-  final MovieDetails movie;
-  final List<Recommendations> recommendations;
-
   const MovieDetailsScreenBody({
     Key? key,
-    required this.movie,
-    required this.recommendations,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      key: const Key('movieDetailScrollView'),
-      slivers: [
-        MovieImageAndBackButton(movie: movie),
-        MovieDetailsSection(movie: movie),
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 24.0),
-          sliver: SliverToBoxAdapter(
-            child: FadeInUp(
-              from: 20,
-              duration: const Duration(milliseconds: 500),
-              child: Text(
-                'More like this'.toUpperCase(),
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 1.2,
-                ),
+    return BlocBuilder<MovieDetailsBloc, MovieDetailsStates>(
+      builder: (context, state) {
+        switch (state.movieDetailsState) {
+          case RequestState.loading:
+            return const Center(
+              child: CircularProgressIndicator(
+                color: Colors.white,
               ),
-            ),
-          ),
-        ),
-        // Tab(text: 'More like this'.toUpperCase()),
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 24.0),
-          sliver: RecommendationMovies(recommendations: recommendations),
-        ),
-      ],
+            );
+          case RequestState.loaded:
+            return CustomScrollView(
+              key: const Key('movieDetailScrollView'),
+              slivers: [
+                MovieImageAndBackButton(
+                  image: state.movieDetails!.backdropPath,
+                ),
+                MovieDetailsSection(movie: state.movieDetails!),
+                SliverPadding(
+                  padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 24.0),
+                  sliver: SliverToBoxAdapter(
+                    child: FadeInUp(
+                      from: 20,
+                      duration: const Duration(milliseconds: 500),
+                      child: Text(
+                        'More like this'.toUpperCase(),
+                        style: const TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 1.2,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                // Tab(text: 'More like this'.toUpperCase()),
+                const SliverPadding(
+                  padding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 24.0),
+                  sliver: RecommendationMovies(),
+                ),
+              ],
+            );
+          case RequestState.error:
+            return Center(
+              child: Text(state.movieDetailsErrorMessage),
+            );
+        }
+      },
     );
   }
 }
