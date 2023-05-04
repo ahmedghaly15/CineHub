@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cine_app/core/components/shimmer_movies_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shimmer/shimmer.dart';
 
 import '../../controllers/movie_details_controller/bloc/movie_details_bloc.dart';
 import '/core/global/app_navigation.dart';
@@ -29,7 +29,7 @@ class RecommendationMovies extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                   child: GestureDetector(
                     onTap: () {
-                      AppNavigation.navigateTo(
+                      AppNavigation.navigateReplacementTo(
                         context: context,
                         screen: MovieDetailsScreen(id: recommendation.id),
                       );
@@ -37,18 +37,8 @@ class RecommendationMovies extends StatelessWidget {
                     child: CachedNetworkImage(
                       imageUrl:
                           ApiConstants.imageUrl(recommendation.backdropPath!),
-                      placeholder: (context, url) => Shimmer.fromColors(
-                        baseColor: Colors.grey[850]!,
-                        highlightColor: Colors.grey[800]!,
-                        child: Container(
-                          height: 170.0,
-                          width: 120.0,
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                        ),
-                      ),
+                      placeholder: (context, url) =>
+                          const ShimmerMoviesListView(),
                       errorWidget: (context, url, error) =>
                           const Icon(Icons.error),
                       height: 180.0,

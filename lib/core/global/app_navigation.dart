@@ -34,6 +34,13 @@ abstract class AppNavigation {
     Navigator.of(context).push(_createRoute(screen));
   }
 
+  static void navigateReplacementTo({
+    required BuildContext context,
+    required Widget screen,
+  }) {
+    Navigator.of(context).pushReplacement(_createRoute(screen));
+  }
+
   static void navigateAndFinish({
     required BuildContext context,
     required Widget screen,

@@ -7,7 +7,7 @@ import '../../controllers/movie_controller/bloc/movies_bloc.dart';
 import '../../controllers/movie_controller/bloc/movies_states.dart';
 import '/core/global/app_navigation.dart';
 import '/core/network/api_constants.dart';
-import '/movies/presentation/components/movies_screen_components/shimmer_movies_list_view.dart';
+import '../../../../core/components/shimmer_movies_list_view.dart';
 import '/movies/presentation/screens/movie_details_screen.dart';
 
 class TopRatedMoviesSection extends StatelessWidget {
