@@ -12,11 +12,11 @@ import 'movies/presentation/controllers/movie_controller/bloc/movies_events.dart
 void main() {
   Bloc.observer = MyBlocObserver();
   ServicesLocator().setupServiceLocator();
-  runApp(const CineHub());
+  runApp(const CineHubApp());
 }
 
-class CineHub extends StatelessWidget {
-  const CineHub({super.key});
+class CineHubApp extends StatelessWidget {
+  const CineHubApp({super.key});
 
   @override
   Widget build(BuildContext context) {
