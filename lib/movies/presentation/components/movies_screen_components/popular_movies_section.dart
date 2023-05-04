@@ -1,14 +1,12 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../controllers/movie_controller/bloc/movies_bloc.dart';
 import '../../controllers/movie_controller/bloc/movies_states.dart';
+import '/core/components/movie_poster.dart';
 import '/core/global/app_navigation.dart';
-import '/core/network/api_constants.dart';
 import '/movies/presentation/screens/movie_details_screen.dart';
-import '../../../../core/components/shimmer_movies_list_view.dart';
 
 class PopularMoviesSection extends StatelessWidget {
   const PopularMoviesSection({super.key});
@@ -41,19 +39,7 @@ class PopularMoviesSection extends StatelessWidget {
                         screen: MovieDetailsScreen(id: movie.id),
                       );
                     },
-                    child: ClipRRect(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(16.0)),
-                      child: CachedNetworkImage(
-                        width: 120.0,
-                        fit: BoxFit.cover,
-                        imageUrl: ApiConstants.imageUrl(movie.backdropPath),
-                        placeholder: (context, url) =>
-                            const ShimmerMoviesListView(),
-                        errorWidget: (context, url, error) =>
-                            const Icon(Icons.error),
-                      ),
-                    ),
+                    child: MoviePoster(movie: movie),
                   ),
                 );
               },

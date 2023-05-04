@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 
 import '/core/components/back_button.dart';
 import '/core/network/api_constants.dart';
+import '/movies/domain/entities/movie_details.dart';
 
 class MovieImageAndBackButton extends StatelessWidget {
   const MovieImageAndBackButton({
     super.key,
-    required this.image,
+    required this.movie,
   });
 
-  final String image;
+  final MovieDetails movie;
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,13 @@ class MovieImageAndBackButton extends StatelessWidget {
               );
             },
             blendMode: BlendMode.dstIn,
-            child: CachedNetworkImage(
-              width: MediaQuery.of(context).size.width,
-              imageUrl: ApiConstants.imageUrl(image),
-              fit: BoxFit.cover,
+            child: Hero(
+              tag: movie.id,
+              child: CachedNetworkImage(
+                width: MediaQuery.of(context).size.width,
+                imageUrl: ApiConstants.imageUrl(movie.backdropPath),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),

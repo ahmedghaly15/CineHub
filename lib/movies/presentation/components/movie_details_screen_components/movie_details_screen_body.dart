@@ -31,7 +31,7 @@ class MovieDetailsScreenBody extends StatelessWidget {
               key: const Key('movieDetailScrollView'),
               slivers: [
                 MovieImageAndBackButton(
-                  image: state.movieDetails!.backdropPath,
+                  movie: state.movieDetails!,
                 ),
                 MovieDetailsSection(movie: state.movieDetails!),
                 SliverPadding(
