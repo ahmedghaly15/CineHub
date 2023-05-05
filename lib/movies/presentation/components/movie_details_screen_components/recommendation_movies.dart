@@ -29,7 +29,7 @@ class RecommendationMovies extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                   child: GestureDetector(
                     onTap: () {
-                      AppNavigation.navigateReplacementTo(
+                      AppNavigation.navigateTo(
                         context: context,
                         screen: MovieDetailsScreen(id: recommendation.id),
                       );
