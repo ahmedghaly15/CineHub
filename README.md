@@ -11,10 +11,10 @@ CineHub is the ultimate movies app for film enthusiasts and casual moviegoers al
 
 ## Preview
 
-<div style="display: flex">
-<img style="display: inline-block" src="https://github.com/ahmedghaly15/Social-App/assets/108659381/e99413c9-14dd-4b50-86f4-1efa440eaaca" />
-
-<img style="display: inline-block" src="https://github.com/ahmedghaly15/Social-App/assets/108659381/0e159026-265e-4a56-8276-93d228451ad6" />
+<div>
+<img src="https://github.com/ahmedghaly15/Social-App/assets/108659381/e99413c9-14dd-4b50-86f4-1efa440eaaca" width= "300" height = "600"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/ahmedghaly15/Social-App/assets/108659381/0e159026-265e-4a56-8276-93d228451ad6" width= "300" height = "600"/>
 </div>
 
 https://github.com/ahmedghaly15/Social-App/assets/108659381/544dbb20-7b19-49aa-9716-7cbdecdd0d25
